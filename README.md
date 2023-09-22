@@ -12,11 +12,11 @@ Resource group is a logical container used to organize and manage Azure resource
    
    "BASICS" tab which consist of
        1. Project Details:
-       Subscription: Select the Azure subscription to associate with this resource group.
-       Name the Resource group: Enter a unique name for your resource group. This name should be descriptive and help you identify its purpose.
+          a. Subscription: Select the Azure subscription to associate with this resource group.
+          b. Name the Resource group: Enter a unique name for your resource group. This name should be descriptive and help you identify its purpose.
       
        2. Resource Details: Collection of resources that share the same lifecycle, permission and policies
-       Region: Choose the Azure region where you want to create the resource group. 
+          a.Region: Choose the Azure region where you want to create the resource group. 
 
     "TAGS" tab: for unique identification. Tags are key-value pairs that you can use to categorize and filter resources.It consists of name and Value
    
@@ -54,4 +54,47 @@ RESOURCE GROUPS can also be created via the Cloud Shell route
 6. create the Resource group by typing the command (az group -- create RG)
 
 # VIRTUAL MACHINES
-### Github
+Virtual machines are a fundamental resource that allows users to run and manage virtualized OS and applications
+## Creating a VM
+1. Search for Virtual machines
+2. Click on Create Virtual Machines
+3. To create a new VM, click the "+ Add" button at the top of the Virtual machines page.
+   VMs can either run on Linux or Windows. We have the following Sub Tabs
+### Basics Configuration:
+    -- Project Details: 
+    a. Select your Azure subscription.
+    b. Resource Group: Choose an existing resource group or create a new one.
+    
+    -- Instance Details:
+      a. Virtual Machine Name: Enter a unique name for your VM.
+      b. Region: Choose the Azure region where you want to deploy your VM.
+      c. Availability options
+      d. Availability zone
+      e. Security type
+      f. Image: Select an operating system image. For RDP access, you can choose a Windows Server image.
+      g. Size: Choose the VM size based on your requirements.
+
+   -- Administrator Account:The user will be prompted to input 
+      a. Username
+      b. Enter a username and password. These credentials will be used for RDP access to the VM.
+
+    --Inbound Port Rules:
+       a. Public inbound ports
+       b. Select Inbound ports --- RDP 3389
+
+### Disks:
+   - Configure the OS disk and any additional data disks as needed. You can specify the disk type and size.
+### Networking:
+   - Configure the virtual network settings, including subnet, public IP address and Network Security Group rules.
+### Management:
+   - Configure options like Boot diagnostics, Guest OS diagnostics, and Auto-shutdown according to your preferences.
+### Advanced:
+    - Configure additional settings like extensions, custom scripts, and tags if necessary.
+### Tags 
+### Review + Create:
+    Review the configuration settings you've provided. Ensure everything is accurate.
+Once the user is done with all these, the next step is 
+4. Create the Virtual Machine: Click the "Review + create" button, and then click "Create" to start deploying your VM.
+5. Deployment Progress: Azure will begin creating your Virtual Machine. You can monitor the deployment progress on the Azure Portal dashboard.
+6. Access VM via RDP: Once the deployment is complete, you can access the VM via RDP. Open the Remote Desktop Client on your local machine, enter the VM's public IP address, and use the username and password you set up earlier to log in.
+
